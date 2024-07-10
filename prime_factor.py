@@ -3,7 +3,9 @@ class PrimeFactor:
         factors = []
         if number > 1:
             if number == 4:
-                factors.extend([2, 2])
+                while number % 2 == 0:
+                    factors.append(2)
+                    number //= 2
             else:
                 factors.append(number)
         return factors
