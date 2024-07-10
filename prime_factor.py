@@ -1,5 +1,6 @@
 class PrimeFactor:
     def of(self, param):
+        factors = []
         if param == 2:
-            return [2]
-        return []
+            factors.append(2)
+        return factors
