@@ -5,10 +5,10 @@ class PrimeFactor:
             if number < 4:
                 factors.append(number)
             else:
-                while number % 2 == 0:
-                    factors.append(2)
-                    number //= 2
-                while number % 3 == 0:
-                    factors.append(3)
-                    number //= 3
+                divisor = 2
+                while number > 1:
+                    while number % divisor == 0:
+                        factors.append(divisor)
+                        number //= divisor
+                    divisor += 1
         return factors
